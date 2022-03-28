@@ -1,0 +1,300 @@
+\section{Meccanica dei sistemi di punti materiali}
+
+
+
+\subsection{Moto del centro di massa}
+
+È possibile studiare il moto di un qualunque sistema materiale riducendo lo studio ad un numero sufficientemente elevato di punti materiali in modo da avere $n$ vettori spostamento $\vect{r}_{j = 1, \dots , n}$ grazie ai quali è possibile determinare ogni singola forza $\vect{F}_j$ agente su ciascun punto materiale tale che
+
+\begin{equation}
+    \vect{F}_j = m_j \frac{d^2 \vect{r}_j}{d t^2}
+\end{equation}
+
+Per ciascuna di queste forze è necessario individuare il contributo \textcolor{accent}{interno} $\vect{F}_j^{\mathrm{(int)}}$ dato da punti appartenenti al sistema e quello \textcolor{accent}{esterno} $\vect{F}_j^{\mathrm{(est)}}$ dato da punti esterni al sistema.
+
+\begin{equation}
+    \vect{F}_j^{\mathrm{(est)}} + \vect{F}_{jk}^{\mathrm{(int)}} = m_j \frac{d^2 \vect{r}_j}{d t^2}
+\end{equation}
+
+posta $\vect{F}_j^{\mathrm{(int)}} = \sum_{k=j} \vect{F}_{jk}^{\mathrm{(int)}}$, con $\vect{F}_{jk}^{\mathrm{(int)}}$ la forza agente sul punto $j$ da parte di un altro punto $k$
+
+Sommando le $n$ equazioni definite sarà verificato che per ogni forza $\vect{F}_{jk}^{\mathrm{(int)}}$ ve ne sarà una $\vect{F}_{kj}^{\mathrm{(int)}}$ di reazione.
+
+Si otterrà quindi che
+
+\begin{equation}
+    \vect{F}_j^{\mathrm{(est)}} = \vect{F} = {\sum}_j m_j \frac{d^2 \vect{r}_j}{d t^2}
+\end{equation}
+
+Posta la massa $m = {\sum}_j m_j$ è possibile individuare il \textcolor{accent}{centro di massa} $C$ attraverso il vettore
+
+\begin{equation}
+    \highlight{
+        \vect{r}_c = \frac{\sum m_j \vect{r}_j}{m}
+    }
+\end{equation}
+
+di componenti
+
+\begin{equation*}
+    \begin{aligned}
+        x_c &= \frac{1}{m} {\sum}_j m_j x_j \\
+        y_c &= \frac{1}{m} {\sum}_j m_j y_j \\
+        z_c &= \frac{1}{m} {\sum}_j m_j z_j
+    \end{aligned}
+\end{equation*}
+
+È quindi possibile scrivere
+
+\begin{equation}
+    \highlight{
+        \vect{F} = m \frac{d^2 \vect{r}_c}{dt^2}
+    }
+\end{equation}
+
+Nel caso in cui il sistema sia formato da una distribuzione continua di massa $dm = \rho dV$ il suo centro di massa verrà definito dal vettore $\vect{r} = x \vect{i} + y \vect{j} + z \vect{k}$ come
+
+\begin{equation}
+    \highlight{
+        \vect{r} = \frac{1}{m} \int \rho \vect{r} \ dV
+    }
+\end{equation}
+
+
+
+\subsection{Quantità di moto di un sistema}
+
+La quantità di moto di un sistema di $n$ punti materiali è definita come la somma della quantità di moto dei singoli punti materiali
+
+\begin{equation}
+    \vect{p} = {\sum}_i \vect{p}_i = {\sum}_i m_i \vect{v}_i = {\sum}_i m_i \frac{d \vect{r}_i}{dt}
+\end{equation}
+
+Per la definizione di centro di massa e dato ${\sum}_i m_i \frac{d \vect{r}_i}{dt} = m \frac{d \vect{r_c}}{dt} = m \vect{v}_c$ è possibile scrivere
+
+\begin{equation}
+    \vect{p} = m \vect{v}_c
+\end{equation}
+
+La \textcolor{accent}{prima equazione cardinale della dinamica dei sistemi} è
+
+\begin{equation}
+    \highlight{
+        \vect{F} = \frac{d\vect{p}}{dt}
+    }
+\end{equation}
+
+
+
+\subsection{Principio di conservazione della quantità di moto}
+
+Se in un sistema di punti materiali in ogni istante è nulla la somma delle forze esterne (reali e apparenti) allora
+
+\begin{equation}
+    \frac{d \vect{p}}{dt} = 0
+\end{equation}
+
+e quindi $\sum \vect{p}_i = \vect{p} = \mathrm{const}$.
+
+\begin{quote}
+    La quantità di moto di un sistema isolato di punti materiali resta costante.
+\end{quote}
+
+
+
+\subsection{Teorema del momento della quantità di moto}
+
+In un sistema formato da $n$ punti materiali, scelto un polo $O$ il \textcolor{accent}{momento risultante} rispetto a $O$ sarà
+
+\begin{equation}
+    \vect{M} = \vect{M}_1 + \vect{M}_2 + \ldots + \vect{M}_n  = \sum \vect{r}_j \times \vect{F}_j
+\end{equation}
+
+e il \textcolor{accent}{momento della quantità di moto} del sistema rispetto a $O$ sarà
+
+\begin{equation}
+    \vect{b} = \vect{b}_1 + \vect{b}_2 + \ldots + \vect{b}_n = \sum \vect{r}_j \times \vect{p}_j
+\end{equation}
+
+Preso in considerazione un solo punto materiale, vale la relazione
+
+\begin{equation}
+    \label{eq:}
+    \vect{M}_j^{\mathrm{(est)}} + \vect{M}_j^{\mathrm{(int)}} = \frac{d \vect{b}_j}{dt}
+\end{equation}
+
+e nel caso in cui il punto di riferimento $O$ si muova con velocità $\vect{v}_0$, vale la relazione
+
+\begin{equation}
+    \vect{M}_j^{\mathrm{(est)}} + \vect{M}_j^{\mathrm{(int)}} = \frac{d \vect{b}_j}{dt} + \vect{v}_0 \times m_j \vect{v}_j
+\end{equation}
+
+Il momento risultante delle forze interne è nullo $\sum \vect{M}_j^{\mathrm{(int)}} = 0$ , di conseguenza, posto $\vect{M} = \sum \vect{M}_j = \sum \vect{M}_j^{\mathrm{(est)}}$, si avrà
+
+\begin{equation}
+    \highlight{
+        \vect{M} = \frac{d \vect{b}}{dt}
+    }
+\end{equation}
+
+e nel caso in cui $O$ sia in movimento
+
+\begin{equation}
+    \highlight{
+        \vect{M} = \frac{d \vect{b}}{dt} + \vect{v}_0 \times \vect{p}
+    }
+\end{equation}
+
+%
+
+\begin{equation}
+    \frac{db_a}{dt} = M_a
+\end{equation}
+
+%
+
+\begin{equation}
+    b_{aj} = m_j r_j^2 \omega_{ja} = m_j r_j^2 \dot{\varphi}_j
+\end{equation}
+
+%
+
+\begin{equation}
+    b_a = \left( \sum m_j r_j^2 \right) \omega_a = I_a \omega_a = I_a \dot{\varphi}
+\end{equation}
+
+%
+
+\begin{equation}
+    \highlight{
+        I_a = \sum m_j r_j^2
+    }
+\end{equation}
+
+
+
+\subsection{Teorema del lavoro nei sistemi di punti}
+
+\begin{equation}
+    L_j = \int_1^2 (\vect{F}_j + \vect{f}_j) \cdot d \vect{s}_j = \frac{1}{2} m (v_j'')^2 - \frac{1}{2} m (v_j')^2
+\end{equation}
+
+\begin{equation}
+    \highlight{
+        L = \sum L_j = T_2 - T_1
+    }
+\end{equation}
+
+\begin{equation}
+    \highlight{
+        T = \frac{1}{2} \sum m_j v_j^2
+    }
+\end{equation}
+
+
+
+\subsection{Teorema di K\"onig}
+
+\begin{quote}
+    L'energia cinetica di un sistema di punti è pari all'energia cinetica propria nel sistema del centro di massa più l'energia di traslazione del centro di massa
+\end{quote}
+
+\begin{equation}
+    \highlight{
+        T = \frac{1}{2} m v_c^2 + \frac{1}{2} \sum m_j v_{cj}^2
+    }
+\end{equation}
+
+
+
+\subsection{Energia potenziale}
+
+Dato il lavoro di forze interne ed esterne per passare dalla configurazione $1$ alla configurazione $2$
+
+\begin{equation}
+    L = \sum \int_1^2 (\vect{F}_j + \vect{f}_j) \ d\vect{s}_j
+\end{equation}
+
+e considerata una funzione per definire l'energia potenziale del sistema 
+
+\begin{equation}
+    U(x_1, y_1, z_1, \ldots, x_n, y_n, z_n)
+\end{equation}
+
+perché si passi dalla configurazione $1(x_1, y_1, z_1, \ldots, x_n, y_n, z_n)$ alla configurazione $2(x_1', y_1', z_1', \ldots, x_n', y_n', z_n')$ vale la relazione
+
+\begin{equation}
+    U(1) - U(2) = L_{12}
+\end{equation}
+
+di conseguenza, per una configurazione qualsiasi $C(x_1, y_1, z_1, \ldots, x_n, y_n, z_n)$ l'energia potenziale sarà
+
+\begin{equation}
+   U(x_1, y_1, z_1, \ldots, x_n, y_n, z_n) = - L_{1C} + U(1)
+\end{equation}
+
+Quando tutte le forze interne sono conservative, come in questo caso, il lavoro totale delle forze applicate $\vect{R}_j = \vect{F}_j + \vect{f}_j$ è un differenziale del lavoro totale
+
+\begin{equation}
+    dL = \sum (R_{jx} dx_j + R_{jy} dy_j + R_{jz} dz_j) = -dU
+\end{equation}
+
+inoltre
+
+\begin{equation}
+    \begin{dcases}
+        R_{jx} = - \frac{\partial U}{\partial x_j} \\
+        R_{jy} = - \frac{\partial U}{\partial y_j} \\
+        R_{jz} = - \frac{\partial U}{\partial z_j}
+    \end{dcases}
+\end{equation}
+
+
+
+\subsection{Conservazione dell'energia meccanica}
+
+Nel caso in cui tutte le forze agenti sul sistema siano conservative, l'energia del sistema si conserva
+
+\begin{equation}
+    \highlight{
+        T + U = E = \mathrm{const}
+    }
+\end{equation}
+
+
+
+\subsection{Urto normale centrale}
+
+Negli urti si conserva sempre la quantità di moto
+
+\begin{equation}
+    m_1 \vect{v}_{1i} + m_2 \vect{v}_{2i} = 
+    m_1 \vect{v}_{1f} + m_2 \vect{v}_{2f}
+\end{equation}
+
+
+
+\subsubsection{Urto perfettamente elastico}
+
+L'energia cinetica si conserva solo negli urti perfettamente elastici
+
+\begin{equation}
+    \frac{1}{2} m_1 \vect{v}_{1i}^2 + m_2 \vect{v}_{2i}^2 = 
+    \frac{1}{2} m_1 \vect{v}_{1f}^2 + m_2 \vect{v}_{2f}^2
+\end{equation}
+
+
+
+\subsubsection{Urto anelastico}
+
+Nel caso in cui l'urto sia \emph{perfettamente} anelastico
+
+\begin{equation}
+    m_1 \vect{v}_{1i} + m_2 \vect{v}_{2i} = 
+    (m_1  + m_2) \vect{v}_{f}
+\end{equation}
+
+\begin{equation}
+    (1 - \alpha) \left( \frac{1}{2} m_1 \vect{v}_{1i}^2 + m_2 \vect{v}_{2i}^2 \right) = 
+    \frac{1}{2} (m_1 + m_2) \vect{v}_{f}^2
+\end{equation}

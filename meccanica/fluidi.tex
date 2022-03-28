@@ -1,0 +1,139 @@
+\section{Meccanica dei fluidi}
+
+I \textcolor{accent}{fluidi ideali} godono delle seguenti proprietà
+
+\begin{enumerate}
+    \item incompressibilità
+    \item assenza di viscosità, quindi i cambiamenti di forma non avvengono a spese del lavoro
+\end{enumerate}
+
+
+
+\subsection{Pressione in un punto di un fluido}
+
+La \textcolor{accent}{pressione media} esercitata dalla componente normale di $\Delta \vect{F}$ per l'elemento $\Delta S$ è rappresentata con
+
+\begin{equation*}
+    p_m = \frac{\Delta \vect{F} \cdot \vect{n}}{\Delta S}
+\end{equation*}
+
+e la \textcolor{accent}{pressione} come il limite
+
+\begin{equation}
+    p = \lim_{\Delta S \to 0} \frac{\Delta \vect{F} \cdot \vect{n}}{\Delta S}
+\end{equation}
+
+Nel caso di fluidi ideali o in equilibrio (e $\Delta \vect{F}$ diretto come $\vect{n}$) è definita come
+
+\begin{equation}
+    \highlight{
+        p = \lim_{\Delta S \to 0} \frac{|\Delta \vect{F}|}{\Delta S}
+    }
+\end{equation}
+
+
+
+\subsection{Equazioni della statica dei fluidi}
+
+Considerato un elemento $dV$ del fluido in equilibrio
+
+\begin{equation}
+    \vect{g} = \frac{d \vect{F}_v}{dm}
+\end{equation}
+
+Le \textcolor{accent}{equazioni della statica dei fluidi} sono
+
+\begin{equation}
+    \highlight{
+        \nabla p = \rho \vect{g} =
+        \begin{cases}
+            \dfrac{\partial p}{\partial x} = \rho X \\
+            \dfrac{\partial p}{\partial y} = \rho Y \\
+            \dfrac{\partial p}{\partial z} = \rho Z
+        \end{cases}
+    }
+\end{equation}
+
+\begin{equation*}
+    dp = - \rho \ dU
+\end{equation*}
+
+In un fluido omogeneo ($\rho = \mathrm{const}$) si ha
+
+\begin{equation}
+    \highlight{
+        p = - \rho U + \mathrm{const}
+    }
+\end{equation}
+
+\begin{quote}
+    In un fluido omogeneo soggetto a forze di volume conservative e in equilibrio le \textcolor{accent}{superfici isobare} ($p = \mathrm{const}$) sono superfici equipotenziali ($U = \mathrm{const}$).
+\end{quote}
+
+
+
+\subsection{Meccanica dei fluidi pesanti}
+
+
+
+\subsection{Principio di Pascal}
+
+\begin{quote}
+    In un fluido in quiete non soggetto a forze esterne di volume la pressione è uguale in tutto il fluido.
+\end{quote}
+
+
+
+\subsection{Misura della pressione}
+
+\begin{equation}
+    p = p_0 + \rho g h
+\end{equation}
+
+
+
+\subsection{Principio di Archimede}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+    
+    \end{tikzpicture}
+    \caption{}
+    \label{fig:principio_archimede}
+\end{figure}
+
+\begin{quote}
+    Un corpo immerso in un fluido pesante in equilibrio, è soggetto a un forza diretta verticalmente verso l'alto di intensità pari al peso della massa fluida spostata e applicata al baricentro di questa.
+\end{quote}
+
+
+
+\subsection{Dinamica dei fluidi}
+
+
+
+\subsection{Linee di flusso e di corrente}
+
+
+
+\subsection{Equazione di continuità}
+
+\begin{equation}
+    \highlight{
+        \rho_1 v_1 S_1 = \rho_2 v_2 S_2
+    }
+\end{equation}
+
+
+
+\subsection{Equazione di Bernoulli}
+
+\begin{equation}
+    \highlight{
+        z + \frac{p}{\rho g} + \frac{v^2}{2g} = \mathrm{const}
+    }
+\end{equation}
+
+
+

@@ -1,0 +1,639 @@
+\section{Dinamica del punto materiale}
+
+\subsection{Legge d'inerzia}
+
+È un sistema inerziale ogni sistema di riferimento nel quale un punto materiale non sia soggetto a forze e sia in quiete o in moto rettilineo uniforme con velocità costante.
+
+\begin{equation}
+    \highlight{\vect{r} = \vect{r}_0 + \vect{r}' + \vect{u} \cdot t}
+\end{equation}
+
+
+
+\subsection{Secondo principio della dinamica}
+
+\begin{equation*}
+    [M] = [L^{-1} F T^2]
+\end{equation*}
+
+\begin{equation}
+    \vect{F} = m \cdot \vect{a}
+\end{equation}
+
+\begin{equation}
+    \highlight{\begin{dcases}
+        F_x = ma_x = m \frac{d^2 x}{d t^2} \\
+        F_y = ma_y = m \frac{d^2 y}{d t^2} \\
+        F_z = ma_z = m \frac{d^2 z}{d t^2}
+    \end{dcases}}
+\end{equation}
+
+\begin{equation}
+    \label{eq:somma_forze}
+    \vect{F} = \sum_{i = 1}^n \vect{F}_i = m \sum_{i = 1}^n \vect{a}_i = m \vect{a}
+\end{equation}
+
+Un punto materiale è in \emph{equilibrio} quando $\vect{F} = \sum \vect{F}_i = 0$
+
+
+
+\subsection{Quantità di moto e impulso}
+
+\begin{equation}
+    \highlight{\vect{p} = m \vect{v}}
+\end{equation}
+
+\begin{equation*}
+    [p] = [LMT^{-1}]
+\end{equation*}
+
+La formulazione originale del \emph{secondo principio} è
+\begin{quote}
+    In un sistema di riferimento inerziale la forza totale applicata a un punto materiale è pari alla derivata rispetto al tempo della quantità di moto.
+\end{quote}
+
+\begin{equation}
+    \highlight{\vect{F} = \frac{d \vect{p}}{dt}}
+\end{equation}
+
+\begin{equation}
+    \vect{F} dt = d \vect{p}
+\end{equation}
+
+$\vect{F} dt$ è chiamato \textcolor{accent}{impulso elementare} della forza in ($t$, $t + dt$)
+
+\begin{equation}
+    \int_{t_1}^{t_2} \vect{F} dt = \Delta \vect{p} = \vect{p}_2 - \vect{p}_1
+\end{equation}
+
+
+
+\subsection{Terzo principio della dinamica}
+
+\emph{A ogni azione
+(esercitata da un corpo puntiforme $A$ su un corpo puntiforme $B$)
+corrisponde una reazione uguale e contraria diretta lungo la congiungente i due punti materiali.}
+
+
+
+\subsection{Interazioni fondamentali}
+
+\begin{enumerate}
+    \item \textcolor{accent}{interazione gravitazionale}
+    \item \textcolor{accent}{interazione elettromagnetica}
+    \item \textcolor{accent}{interazione nucleare forte}
+    \item \textcolor{accent}{interazione nucleare debole}
+\end{enumerate}
+
+Per l'interazione \textcolor{accent}{gravitazionale} ogni porzione di materia dell'Universo risente dell'attrazione da parte della rimanente materia.
+È più debole rispetto a ciascuna delle altre forze fondamentali. 
+
+I corpi materiali possono avere una proprietà fisica rappresentata dalla carica elettrica.
+Le interazioni tra questi corpi conducono alla formazione di atomi, molecole e dei loro aggregati e sono rappresentate dalla forza \textcolor{accent}{elettrimagnetica}.
+
+L'interazione \textcolor{accent}{nucleare forte} è presente all'interno dei nuclei atomici, formati da particelle cariche (protoni) e neutre (neutroni). Conferisce stabilità tra i nuclei e viene esercitata sia tra particelle cariche che neutre. L'azione attrattiva è limitata a distanze dell'ordine di $\SI{e-15}{m}$.
+
+L'interazione \textcolor{accent}{nucleare debole} è presente in alcune trasformazioni di particelle. Ad esempio un neutrone libero può trasformarsi in un protone emettendo un elettrone e un neutrino (particella leggera e priva di carica). Un'altra trasformazione in cui è evidente l'interazione debole è quella in cui un nucleo pesante si trasforma in un nucleo più leggero con emissione di una particolare radiazione (decadimento $\beta$).
+
+
+
+\subsection{Peso}
+
+Se un corpo viene lasciato libero sotto l'azione della forza peso si muove lungo la verticale con accelerazione $\vect{g}$
+
+\begin{equation}
+    \highlight{\vect{P} = m \vect{g}}
+\end{equation}
+
+L'accelerazione $\vect{g}$ è detta \textcolor{accent}{accelerazione di gravità}, l'intensità varia a seconda di latitudine, altitudine e conformazione della crosta terrestre. Al livello del mare nelle latitudini della zona temperata l'intensità è circa $g = \SI{9.80665}{ms^{-2}}$.
+
+
+
+\subsection{Forze elastiche}
+
+La \textcolor{accent}{forza elastica} $\vect{F}$ è orientata verso la posizione di equilibrio in $O$. Nel caso in cui $x$ sia sufficientemente piccolo, ha intensità proporzionale a $x$ e avrà espressione
+
+\begin{equation}
+    \vect{F} = - k x \vect{i}
+\end{equation}
+
+con $k > 0$, costante elastica.
+
+\begin{figure}[!h]
+    \begin{tikzpicture}
+        \filldraw[light-gray] (-3.25,-1) rectangle (-3,1);
+        \draw[black, ultra thin] (-3,-1) -- (-3,1);
+
+        \draw[black, thin, latex-latex] (-3,.6) -- (0,.6) node[pos=.5, black, anchor=south] {$l$};
+
+        \draw[gray, thin, decoration={aspect=0.3, segment length=4, amplitude=6, coil}, decorate] (-2.5,0) -- (0,0);
+        \draw[gray, thin] (-3,0) -- (-2.5,0);
+        
+        \filldraw[black] (0,0) circle (1pt) node[anchor=north] {$O$};
+        
+        \draw[black] (0,0) node[anchor=south west] {$P$};
+        
+        \draw[black, ultra thin, dashed, -latex] (0,0) -- (2,0) node[anchor=north east] {$x$};
+    \end{tikzpicture}
+
+    \begin{tikzpicture}
+        \filldraw[light-gray] (-3.25,-1) rectangle (-3,1);
+        \draw[black, ultra thin] (-3,-1) -- (-3,1);
+
+        \draw[black, thin, latex-latex] (0,.6) -- (1,.6) node[pos=.5, black, anchor=south] {$x$};
+
+        \draw[lightgray, ultra thin, decoration={aspect=0.3, segment length=5, amplitude=6, coil}, decorate] (-2.5,0) -- (1,0);
+        \draw[gray, thin] (-3,0) -- (-2.5,0);
+        
+        \filldraw[black] (0,0) circle (1pt) node[anchor=north, inner sep=4] {$O$};
+        
+        \filldraw[black] (1,0) circle (1pt) node[anchor=south west] {$P$};
+        
+        \draw[black, thick, -latex] (1,0) -- (0,0)
+            node[pos=.5, anchor=north, inner sep=6] {$\vect{F}$};
+        
+        \draw[black, ultra thin, dashed, -latex] (0,0) -- (2,0) node[anchor=north east] {$x$};
+        \draw[black, ultra thin, dashed] (0,0) -- (0,.8);
+        \draw[black, ultra thin, dashed] (1,0) -- (1,.8);
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+In generale la forza sarà definita indicando con $\vect{r}$ il vettore che indica lo spostamento dalla posizione di riposo in $O$ fino al punto $P$
+
+\begin{equation}
+    \highlight{\vect{F} = -k \vect{r}}
+\end{equation}
+
+\paragraph{Osservazione}
+
+Dato un corpo di massa $m$ che si muove lungo l'asse $x$ con legge $x (t) = A cos (\omega t  + \varphi)$, esso avrà velocità pari a $\dot{x} (t) = - A \omega sin (\omega t  + \varphi)$ e accelerazione $\ddot{x} (t) = - A \omega^2 cos (\omega t + \varphi) = - \omega^2 x$.
+
+La forza risultante su tale corpo sarà quindi $\vect{F} = m \ddot{x} \vect{i} = - m \omega^2 x \vect{i}$ e potrà essere vista come una forza elastica ponendo
+
+\begin{equation}
+    \label{eq:k_moto_armonico}
+    k = m \omega^2
+\end{equation} 
+
+e quindi
+
+\begin{equation}
+    \vect{F} = - k x \vect{i}
+\end{equation}
+
+Inoltre dalla (\ref{eq:k_moto_armonico}) si può ricavare $\omega$
+
+\begin{equation}
+    \omega = \sqrt{\frac{k}{m}}
+\end{equation}
+
+mentre $A$ e $\varphi$ si ricavano dalla legge del moto.
+
+
+
+\subsection{Reazioni vincolari}
+
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}
+        \filldraw[light-gray] (0,0) rectangle (5, -.25);
+        \draw[black, ultra thin] (0,0) -- (5,0);
+    
+        \filldraw[ball color=light] (1,.3) circle (.3);
+        \draw[black, thin] (1,.3) circle (.3);
+        
+        \draw[black, very thick, -latex] (1,.3) -- ++(0,1.5) node[anchor=north west] {$\vect{R}$};
+        \draw[black, very thick, -latex] (1,.3) -- ++(0,-1.5) node[anchor=south west] {$\vect{P}$};
+        \draw[black, very thick, -latex] (1,.3) -- ++(2,0) node[anchor=south east] {$\vect{F}$};
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+
+\subsection{Attrito}
+
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}
+        \filldraw[light-gray] (0,0) rectangle (5,-.25);
+        \draw[black, ultra thin] (0,0) -- (5,0);
+        
+        \filldraw[light] (1,0) rectangle (3,1.5);
+        \draw[black] (1,0) rectangle (3,1.5);
+    
+        \draw[black, very thick, -latex] (2,.75) -- (4,.75) node[anchor=south east] {$\vect{F}$};
+        \draw[black, very thick, -latex] (2,.75) -- (2,-1.25) node[anchor=south west] {$\vect{P}$};
+        \draw[black, very thick, -latex] (2,.75) -- (2,2.75) node[anchor=north west] {$\vect{R}_N$};
+        \draw[accent, very thick, -latex] (2,.75) -- (0,.75) node[black, anchor=south west] {$\vect{R}_T$};
+        \filldraw[black] (2,.75) circle (1pt);
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+La forza di attrito statico $\vect{R}_T$ si oppone alla componente della forza $\vect{F}$ applicata al corpo trasversale al piano.
+
+\begin{equation*}
+    F \leq \mu_s R_N
+\end{equation*}
+
+\begin{equation}
+    \label{eq:attrito_statico}
+    R_T = A \leq \mu_s R_N
+\end{equation}
+
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}
+        \filldraw[light-gray] (-2.5,0) rectangle (2.5,-.25);
+        \draw[black, ultra thin] (-2.5,0) -- (2.5,0);
+    
+        \draw[black, thin] (0,0) -- (0,2.5);
+        \draw[black, thin] (0,0) -- (-.647,2.4148);
+        \draw[black, thin] (0,0) -- (.647,2.4148);
+        
+        \draw[black, thin] (0,2) node[anchor=south east] {$\varphi_s$} arc (90:105:2);
+        
+        \draw[black, very thick, -latex] (0,0) -- (0,1.5) node[anchor=north west] {$\vect{R}_N$};
+        \draw[black, very thick, -latex] (0,1.5) -- (-.388,1.5) node[anchor=east] {$(R_T)_{\max} = \mu_s R_N$};
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{equation}
+    \tan \varphi_s = \frac{\mu_s R_N}{R_N} = \mu_s
+\end{equation}
+
+Una volta che il corpo è stato messo in moto perché $F > \mu_s R_N$, la forza avente direzione di $\vect{F}$ necessaria per mantenere in moto il corpo avrà intensità minore di $\mu_d R_N$
+
+\begin{equation}
+    \label{eq:attrito_dinamico}
+    F = \mu_d R_N
+\end{equation}
+
+con $\mu_d < \mu_s$. Inoltre $\mu_s$ prende il nome di \emph{coefficiente di attrito statico} mentre $\mu_d$ prende il nome di \emph{coefficiente di attrito dinamico}.
+
+La (\ref{eq:attrito_statico}) e la (\ref{eq:attrito_dinamico}) sono empiriche.
+
+
+
+\subsection{Resistenze passive}
+
+
+
+\subsection{Forze elettriche}
+
+
+
+\subsection{Forze magnetiche su cariche in moto}
+
+
+
+\subsection{Processi oscillatori}
+
+
+\subsubsection{Oscillazioni libere}
+
+\begin{equation}
+    \vect{F} = -k x \vect{i}
+\end{equation}
+
+\begin{equation}
+    \highlight{m \frac{d^2 x}{d t^2} = -kx}
+\end{equation}
+
+\begin{equation}
+    x = A \cos \omega_0 t
+\end{equation}
+
+\begin{equation}
+    \highlight{\omega_0 = \sqrt{\frac{k}{m}}}
+\end{equation}
+
+
+\subsubsection{Oscillazioni smorzate}
+
+\begin{equation}
+    \highlight{m \frac{d^2 x}{d t^2} + k x + b \frac{dx}{dt} = 0}
+\end{equation}
+
+\begin{equation}
+    x = A e^{- \frac{b}{2m} t} \cos (\omega' t + \varphi)
+\end{equation}
+
+\begin{equation}
+    \highlight{\omega' = \sqrt{\frac{k}{m} - \left( \frac{b}{2m} \right) ^2}}
+\end{equation}
+
+
+\subsubsection{Oscillazioni forzate. Risonanza}
+
+\begin{equation}
+    \highlight{m \frac{d^2 x}{d t^2} + b \frac{dx}{dt} + kx = F \cos \omega t}
+\end{equation}
+
+
+\subsubsection{Oscillatore armonico in due o tre dimensioni}
+
+
+
+\subsection{Pendolo semplice}
+
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}
+        \coordinate (c) at (0,4);
+        \coordinate (o) at (0,0);
+        \coordinate (p) at (1.3681,.24122);
+
+        \filldraw[light-gray] (-.75,4) rectangle (.75,4.25); 
+        \draw[black, ultra thin] (-.75,4) -- (.75,4);
+    
+        \shade[ball color=light] (1.3681,.24122) circle (.33);
+        \draw[black, ultra thin] (1.3681,.24122) circle (.33); 
+    
+        \filldraw[black] (c) circle (1pt)
+            node[anchor=north east] {$C$};
+        
+        \draw[black, thin] (c) -- (o)
+            node[pos=.5, anchor=east] {$l$} -- (0,-1.25);
+        \draw[black, thick, -latex] (o) arc (270:300:4)
+            node[pos=.33, anchor=south] {$s$};
+        \draw[black, thick] (o) arc (270:240:4);
+        
+        \draw[black, thin] (0,2.5) node[anchor=north west] {$\theta$} arc (270:290:1.5);
+    
+        \filldraw[black] (p) circle (1pt); % pendolo
+        
+        \draw[black, thick, -latex] (o) -- (0,-1)
+            node[anchor=south east] {$\vect{P} = m \vect{g}$};
+        \draw[black, thick, -latex] (o) -- (0,1)
+            node[anchor=north east] {$\vect{R}$};
+        
+        \draw[gray, ultra thin, dashed] (o) circle (.33);
+    
+        \draw[black, thin, dashed] (c) -- (p);
+        
+        \draw[black, thick, -latex] (p) -- (1.3681,-.75878)
+            node[anchor=east] {$\vect{P}$};
+    
+        \filldraw[black] (o) circle (1pt)
+            node[anchor=north east] {$O$};
+
+        \draw[black, thick, -latex] (p) -- (1.026,1.181)
+            node[anchor=west] {$\vect{R}'$};
+        \draw[black, thin, -latex] (p) -- (1.71,-.698)
+            node[anchor=south west] {$P \sin \theta$};
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+L'equazione fondamentale della dinamica si scrive
+
+\begin{equation}
+    \label{eq:pendolo}
+    \vect{F} = \vect{P} + \vect{R}' = m \vect{a}
+\end{equation}
+
+\begin{equation}
+    s = l \theta
+\end{equation}
+
+Proiettando la (\ref{eq:pendolo}) sulla tangente orientata (nel verso delle $s$ crescenti) si ottiene
+
+\begin{equation*}
+    - m g = \sin \theta = , \frac{d^2 s}{d t^2}
+\end{equation*}
+
+\begin{equation}
+    \label{eq:pendolo_tangente}
+    \frac{d^2 s}{d t^2} = - g \sin \frac{s}{l}
+\end{equation}
+
+Per piccoli spostamenti si pone $\sin \theta = \theta = s / l$ ottenendo
+
+\begin{equation*}
+    \frac{d^2 s}{d t^2} = - \frac{g}{l} s
+\end{equation*}
+
+Per piccole oscillazioni il periodo del pendolo semplice è indipendente dall'ampiezza dell'oscillazione
+
+\begin{equation}
+    \label{eq:pendolo_piccole_oscillazioni}
+    \highlight{T} = \frac{2 \pi}{\omega} = \highlight{2 \pi \sqrt{\frac{l}{g}}}
+\end{equation}
+
+Se si proietta la (\ref{eq:pendolo}) sulla normale alla traiettoria si ha
+
+\begin{equation}
+\label{eq:pendolo_normale}
+    R' - P \cos \theta = m a_n = m \frac{v^2}{l}
+\end{equation}
+
+Nel caso di oscillazioni non piccole,
+diversamente quindi dall'\emph{isocronismo delle piccole oscillazioni} espressa dalla (\ref{eq:pendolo_piccole_oscillazioni}),
+la soluzione della (\ref{eq:pendolo_tangente}) fornisce per il periodo un'espressione approssimata che dipende da $\theta_{\max}$
+
+\begin{equation}
+    T = 2 \pi \frac{l}{g} \left( 1 + \frac{1}{4} \sin^2 \frac{\theta_{\max}}{2} + \frac{1}{64} \sin^4 \frac{\theta_{\max}}{2} + ... \right)
+\end{equation}
+
+
+
+\subsection{Momento di una forza rispetto a un punto e rispetto a un asse}
+
+Si definisce \textcolor{accent}{momento della forza} $\vect{F}$ rispetto a un punto $O$ il vettore
+
+\begin{equation}
+    \highlight{\vect{M} = \vect{r} \times \vect{F}}
+\end{equation}
+
+avente intensità
+
+\begin{equation}
+    \label{eq:momento}
+    M = r F \sin \theta = F b
+\end{equation}
+
+con $b$ braccio della forza.
+
+Inoltre se $n$ forze sono applicate in $P$, data la (\ref{eq:somma_forze}), il momento di $\vect{F}$ è uguale alla somma dei momenti delle singole forze rispetto a $O$
+
+\begin{equation}
+    \label{eq:somma_momenti}
+    \vect{M} = \vect{r} \times \vect{F} = \vect{r} \times \sum_{i=1}^n \vect{F}_i = \sum_{i=1}^n \vect{M}_i
+\end{equation}
+
+\begin{equation}
+    [M] = [L^2 M T^{-2}]
+\end{equation}
+
+
+
+\subsection{Momento della quantità di moto}
+
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale=1, rotate=20]
+    
+        \coordinate (o) at (0,0); 
+        \coordinate (p) at (2.5,0);
+
+        \draw[black, thick, -latex] (o)
+            node[anchor=east] {$O$} -- (p)
+            node[anchor=south east] {$P$}
+            node[pos=.5, anchor=south east, black] {$\vect{r}$};
+
+        \draw[accent, thick, -latex] (p) -- (3.5,-1)
+            node[anchor=north, black] {$\vect{p}$};
+            
+        \draw[black, thin, -latex] (p) -- (2.5,-1)
+            node[pos=.5, anchor=north east] {$m \vect{v}_n$};
+        \draw[black, thin, -latex] (p) -- (3.5,0)
+            node[pos=.8, anchor=south] {$m \vect{v}_r$};
+
+        \draw[accent, thick, -latex] (o) -- (-1,-1.5)
+            node[anchor=south east, black] {$\vect{b}$};
+        
+        \filldraw[black] (o) circle (1pt);
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+Preso un punto (polo) $O$, sia il vettore $\vect{p} = m \vect{v}$ la quantità di moto di un punto $P$ all'istante $t$. Il \textcolor{accent}{momento della quantità di moto} rispetto al polo $O$ sarà
+
+\begin{equation}
+    \label{eq:momento_quantità_di_moto}
+    \highlight{\vect{b} = \vect{r} \times \vect{p}}
+\end{equation}
+
+Prese le componenti di $\vect{p}$ $m \vect{v}_r$, nella direzione di $\vect{r}$, e $m \vect{v}_n$, nella direzione normale a $\vect{r}$, il momento della quantità di moto diventerà
+
+\begin{equation}
+    \vect{b} = \vect{r} \times m \vect{v}_r + \vect{r} \times m \vect{v}_n = \vect{r} \times m \vect{v}_n
+\end{equation}
+
+Di conseguenza l'intensità di $b$ è
+
+\begin{equation}
+    b = m r v_n
+\end{equation}
+
+\begin{equation}
+    [b] = [L^2 M T^{-2}]
+\end{equation}
+
+
+
+\subsection{Teorema del momento della quantità di moto}
+
+Per un punto materiale $P$ soggetto a una forza $\vect{F}$ vale la relazione
+
+\begin{equation*}
+    \vect{F} = \frac{d\vect{p}}{dt}
+\end{equation*}
+
+Preso in considerazione un polo $O$ e indicato con $\vect{r}$ il vettore $\vect{OP}$ si ottiene
+
+\begin{equation}
+    \label{eq:momento_braccio_forza}
+    \vect{M} = \vect{r} \times \vect{F} = \vect{r} \times \frac{d \vect{p}}{dt}
+\end{equation}
+
+inoltre differenziando la (\ref{eq:momento_quantità_di_moto}) si avrà
+
+\begin{equation}
+    \label{eq:derivata_quantità_di_moto}
+    \frac{d \vect{b}}{dt} = \frac{d \vect{r}}{dt} \times \vect{p} + \vect{r} \times \frac{d \vect{p}}{dt}
+\end{equation}
+
+poiché $d \vect{r} / dt = \vect{v}$ è parallelo a $\vect{p} = m \vect{v}$ e il loro prodotto vettoriale nullo, in un sistema di riferimento inerziale \emph{il momento delle forze è uguale alla derivata rispetto al tempo del momento della quantità di moto}
+
+\begin{equation}
+    \label{eq:momento_sistema_inerziale}
+    \highlight{\vect{M} = \frac{d \vect{b}}{dt}}
+\end{equation}
+
+Nel caso in cui il punto $O$ non sia fisso e si muova di velocità $\vect{v}_0$ rispetto al sistema di riferimento inerziale adottato, la (\ref{eq:momento_braccio_forza}) si può generalizzare. Inoltre nella (\ref{eq:derivata_quantità_di_moto}) il termine $d \vect{r} / dt \times \vect{p}$ non potrà più essere annullato, la derivata $d \vect{r} / dt$ sarà $\vect{v} - \vect{v}_0$ e si avrà
+
+\begin{equation}
+    \frac{d \vect{b}}{dt} = -\vect{v}_0 \times \vect{p} + \vect{r} \times \frac{d \vect{p}}{dt}
+\end{equation}
+
+da cui
+
+\begin{equation}
+    \highlight{\vect{M} = \frac{d \vect{b}}{dt} + \vect{v}_0 \times \vect{p}}
+\end{equation}
+
+È inoltre vero che:
+
+\begin{quote}
+    in un sistema di riferimento inerziale, la derivata rispetto al tempo del momento assiale della quantità di moto di un punto materiale rispetto a una retta orientata fissa $a$ è pari in ogni momento al momento della forza totale agente sul punto.
+\end{quote}
+
+\begin{equation}
+    \label{eq:momento_inerziale}
+    \highlight{M_a = \frac{db_a}{dt}}
+\end{equation}
+
+L'impulso angolare in un intervallo di tempo finito è pari alla variazione del momento della quantità di moto
+
+\begin{equation}
+    \int_{t_1}^{t_2} \vect{M} dt = \vect{b}_2 - \vect{b}_1 = \Delta \vect{b}
+\end{equation}
+
+Se l'impulso è nullo allora il momento della quantità di moto calcolato rispetto a $O$ sarà costante $\vect{b} = const$.
+
+
+È definito inoltre \textcolor{accent}{impulso elementare angolare} il prodotto
+
+\begin{equation}
+    \vect{M} dt = d \vect{b}
+\end{equation}
+
+
+
+\subsection{Moto in sistemi non inerziali}
+
+Dati due sistemi di riferimento, il primo inerziale e il secondo non inerziale, e definita $\vect{a}_a$ l'accelerazione di un punto materiale misurata nella terna inerziale e $\vect{a}_r$ l'accelerazione misurata nella terna non inerziale, la relazione tra queste due sarà
+
+\begin{equation}
+    \vect{a}_a = \vect{a}_r + \vect{a}_t + \vect{a}_c
+\end{equation}
+
+La forza reale $\vect{F}$ per l'osservatore del sistema inerziale sarà $m \vect{a}_a$ mentre l'osservatore del sistema non inerziale riscontrerà la presenza di forze apparenti
+
+\begin{equation*}
+    m \vect{a}_a = m \vect{a}_r + m \vect{a}_t + m \vect{a}_c
+\end{equation*}
+
+\begin{equation}
+    \vect{F} + (- m \vect{a}_t) + (- m \vect{a}_c) = m \vect{a}_r
+\end{equation}
+
+
+
+\subsection{La forza centrifuga}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+Dato un sistema di riferimento inerziale e un punto materiale di massa $m$ che si muova di moto circolare uniforme su un piano % da finire
+
+L'accelerazione osservata è $\vect{a}_t = - \omega^2 \vect{r}$ e la forza centrifuga pari a $- m \vect{a}_t$.
+
+
+
+\subsection{La forza di Coriolis}
+
+\begin{equation}
+    \vect{F}_c = - 2 m \vect{\omega} \times \vect{v}_r
+\end{equation}

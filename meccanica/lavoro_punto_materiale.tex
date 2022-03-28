@@ -1,0 +1,210 @@
+\section{Lavoro ed energia per il punto materiale}
+
+
+
+\subsection{Lavoro}
+
+Data una forza $\vect{F}$ costante applicata a un punto materiale e lo spostamento $\Delta s$ del punto materiale il lavoro è definito come
+
+\begin{equation}
+    L = \vect{F} \cdot \Delta \vect{s}
+\end{equation}
+
+In generale il lavoro elementare di una forza $\vect{F}$ per uno spostamento $d\vect{s}$ è
+
+\begin{equation}
+    \highlight{dL = \vect{F} \cdot d \vect{s}} = F_x dx + F_y dy + F_z dz
+\end{equation}
+
+e quindi il lavoro tra due punti $1$ e $2$ di una curva $C$ rappresentante lo spostamento sarà
+
+\begin{equation}
+    L = {\int_1^2}_C \vect{F} \cdot d \vect{s} = {\int_1^2}_C (F_x dx + F_y dy + F_z dz)
+\end{equation}
+
+Il lavoro, poiché $d \vect{s} = \vect{v} dt$, può essere espresso in funzione del tempo in un intervallo ($t_0$, $t$) come
+
+\begin{equation}
+    L = \int_{t_0}^t \vect{F} \cdot \vect{v} dt
+\end{equation}
+
+Il lavoro è una grandezza scalare, le dimensioni sono
+
+\begin{equation}
+    [L^2MT^{-2}]
+\end{equation}
+
+
+
+\subsection{Potenza}
+
+La potenza media si definisce come
+
+\begin{equation}
+    \overline{W} = \frac{L}{t_2 - t_1}
+\end{equation}
+
+La potenza istantanea è definita da
+
+\begin{equation}
+    \highlight{W = \frac{dL}{dt}}
+\end{equation}
+
+Con $d \vect{s} = \vect{v} dt$
+
+\begin{equation}
+    W = \vect{F} \cdot \frac{d \vect{s}}{dt} = \vect{F} \cdot \vect{v}
+\end{equation}
+
+Le dimensioni sono
+
+\begin{equation}
+    [W] = [L^2MT^{-3}]
+\end{equation}
+
+
+
+\subsection{Energia cinetica}
+
+\begin{equation*}
+    dL = \vect{F} \cdot \Delta \vect{s} = m \frac{d \vect{v}}{dt} \cdot \vect{v} dt
+\end{equation*}
+
+\begin{equation*}
+    \frac{d(v^2)}{dt} = \frac{d(\vect{v} \cdot \vect{v})}{dt} = \frac{d \vect{v}}{dt} \cdot \vect{v} + \vect{v} \cdot \frac{d \vect{v}}{dt} = 2 \frac{d \vect{v}}{dt} \vect{v}
+\end{equation*}
+
+\begin{equation*}
+    dL = \frac{m}{2} \frac{d(v^2)}{dt} dt = \frac{m}{2} d (v^2) = d \left( \frac{1}{2} m v^2 \right) = dT
+\end{equation*}
+
+L'\textcolor{accent}{energia cinetica} sarà quindi definita come
+
+\begin{equation}
+    \highlight{
+        T_1 = \frac{1}{2} m v^2
+    }
+\end{equation}
+
+Il lavoro compiuto da una forza $\vect{F}$ su un punto materiale facendolo passare da una posizione $1$ a una posizione $2$ ne fa variare anche l'energia cinetica
+
+\begin{equation*}
+    L_{12} = \int_1^2 dL = \int_1^2 dT = T_2 - T_1 = \Delta T_{12}
+\end{equation*}
+
+quindi
+
+\begin{equation}
+    L = \Delta T
+\end{equation}
+
+Nel caso in cui il punto sia in rotazione con velocità $\omega$ e raggio $r$ l'energia cinetica si scrive
+
+\begin{equation}
+    T = \frac{1}{2} m v^2 = \frac{1}{2} (m r^2) \omega^2
+\end{equation}
+
+
+
+\subsection{Campi conservativi}
+
+In un campo di forze conservativo il lavoro compiuto per spostare un punto materiale da una posizione $P_i$ a un'altra $P_f$ non dipende dal percorso seguito ma unicamente dalla posizione finale e da quella iniziale
+
+
+
+\subsection{Energia potenziale}
+
+\begin{equation}
+    \highlight{
+        L = - \Delta U
+    }
+\end{equation}
+
+\begin{equation}
+    [U] = [L^2MT^{-2}]
+\end{equation}
+
+\begin{equation}
+    \vect{F} = - \left( \frac{\partial U}{\partial x} \vect{i} +
+                        \frac{\partial U}{\partial y} \vect{j} +
+                        \frac{\partial U}{\partial z} \vect{k} \right) = - grad U = - \nabla U
+\end{equation}
+
+
+
+
+\subsubsection{Campo di forze gravitazionali}
+
+Nel caso di forze $\vect{F} = m \vect{g}$
+
+\begin{align*}
+    U(x,y,z) &= U(y) = - \int_{y_0}^y mg \ dy + U(y_0)  \\
+    &= -mgy + mgy_0 + U(y_0) =                          \\
+    &= -mgy + \mathrm{const}
+\end{align*}
+
+Ponendo $U = 0$ per $y = 0$
+
+\begin{equation}
+    \highlight{
+        U(y) = - mgy
+    }
+\end{equation}
+
+
+
+\subsubsection{Campo di forze centrali}
+
+Nel caso di forze gravitazionali e elettrostatiche $\vect{F} (r) = \pm k/r^2 \ \vect{r} / r$
+
+\begin{align*}
+    U(r) &= - \int_{r_0}^r \left( \pm \frac{k}{r^2} dr \right) + \mathrm{const} = \\
+    &= \pm \left( \frac{1}{r} - \frac{1}{r_0} \right) + U(r_0) =
+    &= \pm \frac{k}{r} + \mathrm{const}
+\end{align*}
+
+Ponendo $U(r) = 0$ per $r = \infty$
+
+\begin{equation}
+    \highlight{
+        U(r) = \pm \frac{k}{r}
+    }
+\end{equation}
+
+
+
+\subsubsection{Campo di forze elastiche}
+
+In questo caso $\vect{F} (x) = - k x \vect{i}$ e l'energia potenziale elastica sarà pari a
+
+\begin{equation}
+    U(x) = - \int_{x_0}^x (- k x) dx + U(x_0) = \frac{1}{2} k x^2 + \mathrm{const}
+\end{equation}
+
+con la costante nulla nel caso si scelga di porre $U(x) = 0$ per $x = 0$.
+
+
+
+\subsection{Conservazione dell'energia meccanica con forze conservative}
+
+Nel caso di un punto materiale soggetto a forze conservative la somma dell'energia cinetica e dell'energia potenziale rimane invariata durante il moto.
+
+\begin{equation}
+    \highlight{E = \mathrm{const} = T_1 + U_1 = T_2 + U_2}
+\end{equation}
+
+
+
+\subsection{Variazione dell'energia meccanica in presenza di forze non conservative}
+
+Nel caso generale per cui siano presenti forze conservative e non conservative il lavoro che porta un punto materiale dalla posizione $1$ alla posizione $2$ può essere espresso come
+
+\begin{equation}
+    \sum L = \sum L_{nc} + \sum L_c = T_2 - T_1
+\end{equation}
+
+Poiché il lavoro delle forze conservative può essere espresso attraverso la variazione di energia potenziale $(U_2 - U_1)$, il lavoro delle forze non conservative si può definire come
+
+\begin{equation}
+    \sum L_{nc} = (T_2 + U_2) - (T_1 + U_1) = E_2 - E_1
+\end{equation}

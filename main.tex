@@ -1,0 +1,136 @@
+\documentclass{article}
+
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+\usepackage{multicol}
+
+\usepackage{siunitx}
+\sisetup{
+    % tight-spacing=true,
+    number-unit-product=\text{ },
+    exponent-product = \cdot,
+    output-product = \cdot
+}
+
+\usepackage{tikz}
+\usetikzlibrary{
+    decorations.pathmorphing,
+    patterns,
+    math
+}
+
+% \newenvironment{vstikzpicture}{\vspace*{.6em}\begin{tikzpicture}}{\end{tikzpicture}\vspace*{.4em}}
+\newcommand\tikzsamples{128}
+
+\usepackage{subfiles}
+
+% \usepackage{cclicenses}
+
+\usepackage{enumitem}
+
+\usepackage{bm}
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+
+\usepackage{xcolor}
+\definecolor{highlight}{HTML}{EEEEEE}   % highlight
+\definecolor{accent}{HTML}{BD4B4B}      % accent
+\definecolor{light}{HTML}{EFB7B7}
+\definecolor{dark}{HTML}{000000}
+\definecolor{light-gray}{HTML}{EEEEEE}
+
+\newcommand{\highlight}[2][highlight]{
+    \mathchoice%
+        {\colorbox{#1}{$\displaystyle#2$}}
+        {\colorbox{#1}{$\textstyle#2$}}
+        {\colorbox{#1}{$\scriptstyle#2$}}
+        {\colorbox{#1}{$\scriptscriptstyle#2$}}
+}
+
+\AtBeginEnvironment{quote}{\itshape}
+
+% \usepackage[final, numbered=true, open, openlevel=2, atend] {bookmark}
+\usepackage[final, bookmarks]{hyperref}
+\hypersetup{
+    % pdftex,
+    pdftitle={Fisica},
+    pdfauthor={Matteo Paone},
+    % pdfpagemode=FullScreen,
+    % bookmarksnumbered=true,
+    % bookmarksopen=true,
+    % bookmarksopenlevel=-1,
+    % colorlinks=true,
+    % linkcolor=accent,
+    % linkbordercolor=accent,
+    pdfborderstyle={/S/U/W 0},
+    % hyperindex=true,
+    % pageanchor=false,
+    % plainpages=false,
+    % pdfstartview=Fit,
+    % pdfpagemode=UseOutlines,
+    % pdfpagelayout=TwoPageRight
+}
+
+\usepackage[font=small, labelfont=bf]{caption}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+
+% \renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+% \usepackage[font=small, labelfont=bf]{section}
+% \renewcommand{\thesection}{\Roman{part}.\arabic{section}}
+
+% \renewcommand{\thesubsubsection}{\alph{subsubsection}}
+
+\makeatletter
+    \@addtoreset{section}{part}
+    \@addtoreset{equation}{section}
+    \@addtoreset{figure}{section}
+
+    \let\stdpart\part
+    \renewcommand\part{\clearpage\stdpart}
+
+    \let\stdsection\section
+    \renewcommand\section{\ifnum\c@section>0{\clearpage}\else\fi\stdsection}
+\makeatother
+
+
+
+\title{Fisica}
+\author{Matteo Paone}
+\date{Aprile 2020}
+
+
+
+\begin{document}
+
+\setcounter{page}{-10}
+
+\pagenumbering{gobble}
+
+\maketitle
+
+\vspace{4em}
+
+
+\setcounter{tocdepth}{3}
+
+\tableofcontents
+
+% \listoffigures
+
+\clearpage
+
+\pagenumbering{arabic}
+
+\subfile{meccanica.tex}
+
+\subfile{termodinamica.tex}
+
+\subfile{elettromagnetismo.tex}
+
+\subfile{appendici.tex}
+
+\end{document}
