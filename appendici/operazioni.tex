@@ -5,11 +5,10 @@
 \subsection{Gradiente}
 
 Il \textcolor{accent}{gradiente} di una funzione scalare $A$ è un vettore che ha come componenti nelle direzioni $x$, $y$ e $z$ le derivate parziali rispettivamente in $\partial x$, $\partial y$ e $\partial z$
-
 \begin{equation}
     \mathrm{grad} A = \nabla A = \frac{\partial A}{\partial x} \vect{i} +
-                                 \frac{\partial A}{\partial y} \vect{j} +
-                                 \frac{\partial A}{\partial z} \vect{k}
+    \frac{\partial A}{\partial y} \vect{j} +
+    \frac{\partial A}{\partial z} \vect{k}
 \end{equation}
 
 
@@ -17,21 +16,18 @@ Il \textcolor{accent}{gradiente} di una funzione scalare $A$ è un vettore che h
 \subsection{Divergenza}
 
 La \textcolor{accent}{divergenza} è una grandezza scalare definita da
-
 \begin{equation}
     \mathrm{div} \vect{A} =
-    \nabla \cdot \vect{A} = \frac{\partial A_x}{\partial x} \vect{i} + 
-                            \frac{\partial A_y}{\partial y} \vect{j} + 
-                            \frac{\partial A_z}{\partial z} \vect{k}
+    \nabla \cdot \vect{A} = \frac{\partial A_x}{\partial x} \vect{i} +
+    \frac{\partial A_y}{\partial y} \vect{j} +
+    \frac{\partial A_z}{\partial z} \vect{k}
 \end{equation}
-
 e $\nabla$ rappresenta l'operatore
-
 \begin{equation}
     \highlight{
-        \vect{\nabla} = \frac{\partial}{\partial x} \vect{i} + 
-                        \frac{\partial}{\partial y} \vect{j} + 
-                        \frac{\partial}{\partial z} \vect{k}
+        \vect{\nabla} = \frac{\partial}{\partial x} \vect{i} +
+        \frac{\partial}{\partial y} \vect{j} +
+        \frac{\partial}{\partial z} \vect{k}
     }
 \end{equation}
 
@@ -40,27 +36,25 @@ e $\nabla$ rappresenta l'operatore
 \subsection{Rotore}
 
 Il \textcolor{accent}{rotore} è invece definito da
-
 \begin{equation}\begin{split}
         \highlight{
             \mathrm{rot} \vect{v}
         }
         & = \vect{i} \left( \frac{\partial v_z}{\partial y} - \frac{\partial v_y}{\partial z} \right) +
-            \vect{j} \left( \frac{\partial v_x}{\partial z} - \frac{\partial v_z}{\partial x} \right) +
-            \vect{k} \left( \frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y} \right) = \\
+        \vect{j} \left( \frac{\partial v_x}{\partial z} - \frac{\partial v_z}{\partial x} \right) +
+        \vect{k} \left( \frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y} \right) = \\
         & =
         \highlight{
             \begin{vmatrix}
-                \vect{i} & \vect{j} & \vect{k} \\
+                \vect{i}                    & \vect{j}                    & \vect{k}                    \\
                 \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
-                v_x & v_y & v_z
+                v_x                         & v_y                         & v_z
             \end{vmatrix}
         }
     \end{split}
 \end{equation}
 
 Notazioni equivalenti sono
-
 \begin{equation}
     \mathrm{rot} \vect{v} = \mathrm{curl} \vect{v} = \nabla \times \vect{v}
 \end{equation}
