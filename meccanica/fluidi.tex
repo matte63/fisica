@@ -94,10 +94,20 @@ In un fluido omogeneo ($\rho = \mathrm{const}$) si ha
 
 \subsection{Principio di Archimede}
 
-\begin{figure}
+\begin{figure}[!h]
     \centering
     \begin{tikzpicture}
-    
+        \draw[black, thin] (-2,0) -- (4,0);
+        \filldraw[gray, pattern=dots, pattern color=lightgray] (0,0) rectangle ++ (2,1.5);
+        \draw[black, ultra thick] (0,1.8) -- (0,0) -- (2,0) -- (2,1.8);
+        \filldraw[gray, pattern=crosshatch, pattern color=lightgray] (.5,1) rectangle ++ (1,.5);
+        \filldraw[gray, pattern=north east lines, pattern color=lightgray] (.5,1.5) rectangle ++ (1,.5);
+        \draw[gray, thin] (.5,1) rectangle ++ (1,1);
+        \draw[black, -latex, thick] (.9,1.25) -- ++(0,.67) node[anchor= east, pos=.5] {$\vec{S}$};
+        \draw[black, -latex, thick] (1.1,1.5) -- ++(0,-1) node[anchor= west, pos=.5] {$\vec{P}$};
+
+        % \draw[black, ultra thin, step=.5] (-2,0) grid (4,3);
+        % \draw[black, very thin, step=1] (-2,0) grid (4,3);
     \end{tikzpicture}
     \caption{}
     \label{fig:principio_archimede}
@@ -110,6 +120,24 @@ In un fluido omogeneo ($\rho = \mathrm{const}$) si ha
 
 
 \subsection{Dinamica dei fluidi}
+
+Nello studio delle particelle che compongono un fluido si possono seguire due diversi procedimenti. Il primo, proposto da Eulero conduce alle equazioni di Lagrange ed è detto \textcolor{accent}{lagrangiano}. Studia il moto delle singole particelle e delle loro coordinate $x$, $y$, $z$ come funzione di tempo:
+\begin{align*}
+    x & = x(x_0, y_0, z_0, t) & y & = y(x_0, y_0, z_0, t) & z & = z(x_0, y_0, z_0, t)
+\end{align*}
+con $x_0$, $y_0$, $z_0$ le coordinate della particella nell'istante $t = t_0$.
+
+Il secondo procedimento, sempre proposto da Eulero, invece di seguire le singole particelle ne studia densità e velocità in funzione del tempo, nello spazio occupato dal fluido. Questo punto di vista è detto \textcolor{accent}{euleriano} ed è definito dalle seguenti equazioni:
+\begin{align*}
+    \rho & = \rho (x,y,z,t) & \vect{v} & = \vect{v} (x,y,z,t)
+\end{align*}
+
+Il moto di un fluido si dice \textcolor{accent}{stazionario} quando la velocità \vect{v} di ogni punto dello spazio non cambia con il tempo. Ovviamente la velocità può variare da punto a punto e la velocità per un punto rimane uguale per tutte le particelle che passano per quel punto.
+
+Si definisce \textcolor{accent}{non stazionario} se la velocità in un punto cambia con il tempo.
+Questa può verificarsi nei transienti quando variano le condizioni del moto.
+Viene definito tra i moti \textcolor{accent}{non rotazionale} il moto \textcolor{accent}{turbolento} caratterizzato da variazioni rapidi e casuali della velocità da punto a punto.
+
 
 
 
