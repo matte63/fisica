@@ -1,0 +1,56 @@
+\section{Moti rotazionali e irrotazionali}
+
+In un sistema continuo, dato un elemento infinitesimo nell'intorno di un generico punto $O$ si definiranno come $d\vect{P}$ gli spostamenti elementari degli elementi nell'intorno si $O$. Questi spostamenti avranno tre componenti:
+\begin{enumerate}
+	\item[$d\vect{P}_1$] che rappresenta una traslazione;
+	\item[$d\vect{P}_2$] che rappresenta una rotazione intorno a $O$;
+	\item[$d\vect{P}_3$] legata alla deformazione dell'elemento.
+\end{enumerate}
+
+I moti definiti \textcolor{accent}{irrotazionali} sono quelli per i quali le rotazioni elementari delle particelle sono identicamente nulle. Nei moti irrotazionali le particelle non hanno momento della quantità di moto e hanno espressioni della velocità relativamente semplici.
+
+Se invece il sistema continuo presenta punti per i quali gli elementi nel loro intorno hanno una velocità angolare risultante intorno a quei punti, il moto si dice \textcolor{accent}{rotazionale} o vorticoso.
+
+Per descrivere i moti rotazionali è utile definire il vettore \textcolor{accent}{rotore della velocità}:
+\begin{equation}\begin{split}
+		\highlight{
+			\mathrm{rot} \vect{v}
+		}
+		& = \vect{i} \left( \frac{\partial v_z}{\partial y} - \frac{\partial v_y}{\partial z} \right) +
+		\vect{j} \left( \frac{\partial v_x}{\partial z} - \frac{\partial v_z}{\partial x} \right) +
+		\vect{k} \left( \frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y} \right) = \\
+		& =
+		\highlight{
+			\begin{vmatrix}
+				\vect{i}                    & \vect{j}                    & \vect{k}                    \\
+				\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+				v_x                         & v_y                         & v_z
+			\end{vmatrix}
+		}
+	\end{split}
+\end{equation}
+
+Se il vettore $\mathrm{rot} \vect{v}$ è 0 ovunque il moto è irrotazionale, se è 0 intorno a un punto l'elemento nell'intorno del punto non ha una velocità angolare risultante e il moto è irrotazionale nell'intorno considerato.
+Il \emph{significato fisico} è illustrato dal fatto che se un rotore è non nullo in un punto, introdotto un sistema di coordinate in moto rotatorio con velocità $\vect{\omega} = \frac{1}{2} \mathrm{rot} \vect{v}$, in tale sistema il moto nell'intorno di $P$ è irrotazionale e $\frac{1}{2} \mathrm{rot} \vect{v}$ la velocità angolare del sistema continuo intorno a quel punto.
+
+Inoltre se il campo del vettore $\vect{v}$ è irrotazionale, vale per qualsiasi linea chiusa la relazione:
+\begin{equation}
+	\highlight{
+		\oint \vect{v} \cdot d\vect{s} = \oint v_s ds = 0
+	}
+	\label{eq:oint_vec_nullo}
+\end{equation}
+con $ds$ elemento della curva. Per forze conservative vale analogamente
+\begin{equation}
+	\oint \vect{F} \cdot d\vect{s} = 0
+\end{equation}
+che permette l'introduzione della funzione energia potenziale. Per i campi irrotazionali si può quindi definire una funzione $\psi$ della velocità:
+\begin{equation}
+	\begin{dcases}
+		v_x = - \frac{\partial \psi}{\partial x} \\
+		v_y = - \frac{\partial \psi}{\partial y} \\
+		v_z = - \frac{\partial \psi}{\partial z}
+	\end{dcases}
+\end{equation}
+
+Se la proprietà (\ref{eq:oint_vec_nullo}) non è rispettata anche solo lungo una linea nel campo, allora questo non è irrotazionale ma è possibile che esistano delle regioni limitate in cui rimane valida e in tali regioni è possibile definire la funzione $\psi$.
