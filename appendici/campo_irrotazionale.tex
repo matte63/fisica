@@ -1,0 +1,34 @@
+\section{Campo irrotazionale}
+
+Dato un campo vettoriale $\vect{v} : \mathbb{R}^3 \rightarrow \mathbb{R}^3$ si dice \textcolor{accent}{campo irrotazionale} se il suo rotore è nullo:
+\begin{equation}\begin{split}
+		\nabla \times \vect{v}
+		& = \vect{i} \left( \frac{\partial v_z}{\partial y} - \frac{\partial v_y}{\partial z} \right) +
+		\vect{j} \left( \frac{\partial v_x}{\partial z} - \frac{\partial v_z}{\partial x} \right) +
+		\vect{k} \left( \frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y} \right) = \\
+		& =
+		\begin{vmatrix}
+			\vect{i}                    & \vect{j}                    & \vect{k}                    \\
+			\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+			v_x                         & v_y                         & v_z
+		\end{vmatrix}
+		= 0
+	\end{split}
+\end{equation}
+
+Il rotore di un campo vettoriale nel piano è dato da
+\begin{equation}
+	\nabla \times \vect{v} = \vect{k} \left( \frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y} \right)
+\end{equation}
+quindi il campo è irrotazionale se $\frac{\partial v_y}{\partial x} = \frac{\partial v_x}{\partial y}$
+
+
+Un'altra condizione di irrotazionalità è la jacobiana del campo \emph{simmetrica}:
+\begin{equation}
+	J \cdot v (x,y,z) =
+	\begin{pmatrix}
+		\frac{\partial V_1}{\partial x} & \frac{\partial V_1}{\partial y} & \frac{\partial V_1}{\partial z} \\
+		\frac{\partial V_2}{\partial x} & \frac{\partial V_2}{\partial y} & \frac{\partial V_2}{\partial z} \\
+		\frac{\partial V_3}{\partial x} & \frac{\partial V_3}{\partial y} & \frac{\partial V_3}{\partial z}
+	\end{pmatrix}
+\end{equation}
