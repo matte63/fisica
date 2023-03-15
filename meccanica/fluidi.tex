@@ -147,12 +147,32 @@ Viene definito tra i moti \textcolor{accent}{non rotazionale} il moto \textcolor
 
 \subsection{Equazione di continuità}
 
+
 \begin{equation}
     \highlight{
         \rho_1 v_1 S_1 = \rho_2 v_2 S_2
     }
 \end{equation}
+Per un tratto di fluido in condizioni stazionarie la massa va conservata. Con $\rho$ densità, $v$ velocità e $S$ la superficie.
 
+Nel caso più generale, considerato un volume $V$ limitato da una superficie $S$, con normale $\vect{n}$ orientata verso l'esterno, si può scrivere $\rho \vect{v} \cdot \vect{n} \ dS = \rho v_n dS \ dt$.
+La massa uscente nell'intera superficie sarà $dt \int_S (\rho v_n) dS$.
+Nel caso di fluido compressibile la variazione della massa in $V$ nel tempo $dt$ sarà $dt \int_V \frac{\partial \rho}{\partial t} dV$.
+Preso inoltre un parametro $D$ che indica la quantità di massa per unità di volume entrante nell'unità di tempo, l'equazione di continuità diventa
+\begin{equation*}
+    \int_S (\rho v_n) dS + \int_V \frac{\partial \rho}{\partial t} dV = V \sum D
+\end{equation*}
+da cui
+\begin{equation*}
+    \highlight{
+        \mathrm{div} (\rho \vect{v}) + \frac{\partial \rho}{\partial t} = \sum D
+    }
+\end{equation*}
+
+Considerando il fluido incompressibile, con $\rho_1 = \rho_2$, l'equazione di continuità diventa
+\begin{equation*}
+    v_1 S_1 = v_2 S_2
+\end{equation*}
 
 
 \subsection{Equazione di Bernoulli}

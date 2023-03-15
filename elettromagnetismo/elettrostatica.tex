@@ -19,7 +19,7 @@ Si \textcolor{accent}{definisce intensità di corrente} il rapporto tra la caric
     \begin{tikzpicture}
         \coordinate (q1) at (0,0);
         \coordinate (q2) at (3,.3);
-        
+
         \draw[black, thick, -latex] (q1) -- (q2) node[pos=.5, anchor=south] {$\vect{r}$};
 
         \filldraw[light] (q1) circle (.1);
@@ -82,7 +82,7 @@ L'energia potenziale di un sistema di cariche puntiformi è definita come
 
 \begin{equation}
     \highlight{
-        \mathcal{U} = \frac{1}{2} \frac{1}{4 \pi \varepsilon_0} {\sum}_j {\sum}_{i \ne j} \frac{q_i q_j}{r_{ij}}
+    \mathcal{U} = \frac{1}{2} \frac{1}{4 \pi \varepsilon_0} {\sum}_j {\sum}_{i \ne j} \frac{q_i q_j}{r_{ij}}
     }
 \end{equation}
 
@@ -107,12 +107,12 @@ L'energia potenziale di un sistema di cariche puntiformi è definita come
         \draw[black, thin, -latex] (O) -- (0,3)   node[anchor=north east] {$z$};
 
         \draw[black, thick, -latex] (q) -- (P)
-            node[anchor=north west] {$P$}
-            node[pos=.5, anchor=north west] {$\vect{r}$};
+        node[anchor=north west] {$P$}
+        node[pos=.5, anchor=north west] {$\vect{r}$};
         \filldraw[black] (P) circle (1pt);
         \filldraw[light] (q) circle (.1);
         \draw[black, ultra thin] (q) circle (.1)
-            node[anchor=north west] {$q$};
+        node[anchor=north west] {$q$};
 
 
     \end{tikzpicture}
@@ -133,7 +133,7 @@ Inoltre il campo creato da $N$ cariche puntiformi ha intensità
     \vect{E}_0 = \frac{1}{4 \pi \varepsilon_0} {\sum}_i \frac{q_i}{r_i^2} \frac{\vect{r}_i}{r_i}
 \end{equation}
 
-In una regione di spazio in cui si ha una \emph{distribuzione continua di carica} è possibile definire una \textcolor{accent}{desnità spaziale di carica}
+In una regione di spazio in cui si ha una \emph{distribuzione continua di carica} è possibile definire una \textcolor{accent}{densità spaziale di carica}
 
 \begin{equation}
     \highlight{
@@ -202,6 +202,6 @@ In generale il \textcolor{accent}{teorema di Gauss} viene definito come
     \label{eq:teorema_generale_Gauss}
     \highlight{
         \phi_S (\vect{E}_0) = \int_S \vect{E}_0 \cdot \ dS =
-                              \frac{1}{\varepsilon_0} \int_\tau \rho (x,y,z) \ d\tau
+        \frac{1}{\varepsilon_0} \int_\tau \rho (x,y,z) \ d\tau
     }
 \end{equation}

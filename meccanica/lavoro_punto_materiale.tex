@@ -126,8 +126,8 @@ In un campo di forze conservativo il lavoro compiuto per spostare un punto mater
 
 \begin{equation}
     \vect{F} = - \left( \frac{\partial U}{\partial x} \vect{i} +
-                        \frac{\partial U}{\partial y} \vect{j} +
-                        \frac{\partial U}{\partial z} \vect{k} \right) = - grad U = - \nabla U
+    \frac{\partial U}{\partial y} \vect{j} +
+    \frac{\partial U}{\partial z} \vect{k} \right) = - grad U = - \nabla U
 \end{equation}
 
 
@@ -138,9 +138,9 @@ In un campo di forze conservativo il lavoro compiuto per spostare un punto mater
 Nel caso di forze $\vect{F} = m \vect{g}$
 
 \begin{align*}
-    U(x,y,z) &= U(y) = - \int_{y_0}^y mg \ dy + U(y_0)  \\
-    &= -mgy + mgy_0 + U(y_0) =                          \\
-    &= -mgy + \mathrm{const}
+    U(x,y,z) & = U(y) = - \int_{y_0}^y mg \ dy + U(y_0) \\
+             & = -mgy + mgy_0 + U(y_0) =                \\
+             & = -mgy + \mathrm{const}
 \end{align*}
 
 Ponendo $U = 0$ per $y = 0$
@@ -158,9 +158,9 @@ Ponendo $U = 0$ per $y = 0$
 Nel caso di forze gravitazionali e elettrostatiche $\vect{F} (r) = \pm k/r^2 \ \vect{r} / r$
 
 \begin{align*}
-    U(r) &= - \int_{r_0}^r \left( \pm \frac{k}{r^2} dr \right) + \mathrm{const} = \\
-    &= \pm \left( \frac{1}{r} - \frac{1}{r_0} \right) + U(r_0) =
-    &= \pm \frac{k}{r} + \mathrm{const}
+    U(r) & = - \int_{r_0}^r \left( \pm \frac{k}{r^2} dr \right) + \mathrm{const} = \\
+         & = \pm \left( \frac{1}{r} - \frac{1}{r_0} \right) + U(r_0) =
+         & = \pm \frac{k}{r} + \mathrm{const}
 \end{align*}
 
 Ponendo $U(r) = 0$ per $r = \infty$
@@ -178,7 +178,7 @@ Ponendo $U(r) = 0$ per $r = \infty$
 In questo caso $\vect{F} (x) = - k x \vect{i}$ e l'energia potenziale elastica sarà pari a
 
 \begin{equation}
-    U(x) = - \int_{x_0}^x (- k x) dx + U(x_0) = \frac{1}{2} k x^2 + \mathrm{const}
+    \highlight{U(x)} = - \int_{x_0}^x (- k x) dx + U(x_0) = \highlight{\frac{1}{2} k x^2} + \mathrm{const}
 \end{equation}
 
 con la costante nulla nel caso si scelga di porre $U(x) = 0$ per $x = 0$.
