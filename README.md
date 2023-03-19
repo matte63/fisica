@@ -1,1 +1,3 @@
-# fisica
+# Fisica
+
+`pdflatex main.pdf`
