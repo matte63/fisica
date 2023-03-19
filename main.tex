@@ -82,7 +82,7 @@
 }
 
 \usepackage[font=small, labelfont=bf]{caption}
-\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 
 % \renewcommand{\theequation}{\thesection.\arabic{equation}}
 
@@ -92,9 +92,10 @@
 % \renewcommand{\thesubsubsection}{\alph{subsubsection}}
 
 \makeatletter
-    \@addtoreset{section}{part}
-    \@addtoreset{equation}{section}
-    \@addtoreset{figure}{section}
+    \@addtoreset{chapter}{part}
+    \@addtoreset{section}{chapter}
+    \@addtoreset{equation}{chapter}
+    \@addtoreset{figure}{chapter}
 
     % \let\stdpart\part
     % \renewcommand\part{\clearpage\stdpart}
