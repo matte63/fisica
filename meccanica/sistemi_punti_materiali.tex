@@ -1,8 +1,8 @@
-\section{Meccanica dei sistemi di punti materiali}
+\chapter{Meccanica dei sistemi di punti materiali}
 
 
 
-\subsection{Moto del centro di massa}
+\section{Moto del centro di massa}
 
 È possibile studiare il moto di un qualunque sistema materiale riducendo lo studio ad un numero sufficientemente elevato di punti materiali in modo da avere $n$ vettori spostamento $\vect{r}_{j = 1, \dots , n}$ grazie ai quali è possibile determinare ogni singola forza $\vect{F}_j$ agente su ciascun punto materiale tale che
 
@@ -38,9 +38,9 @@ di componenti
 
 \begin{equation*}
     \begin{aligned}
-        x_c &= \frac{1}{m} {\sum}_j m_j x_j \\
-        y_c &= \frac{1}{m} {\sum}_j m_j y_j \\
-        z_c &= \frac{1}{m} {\sum}_j m_j z_j
+        x_c & = \frac{1}{m} {\sum}_j m_j x_j \\
+        y_c & = \frac{1}{m} {\sum}_j m_j y_j \\
+        z_c & = \frac{1}{m} {\sum}_j m_j z_j
     \end{aligned}
 \end{equation*}
 
@@ -62,7 +62,7 @@ Nel caso in cui il sistema sia formato da una distribuzione continua di massa $d
 
 
 
-\subsection{Quantità di moto di un sistema}
+\section{Quantità di moto di un sistema}
 
 La quantità di moto di un sistema di $n$ punti materiali è definita come la somma della quantità di moto dei singoli punti materiali
 
@@ -86,7 +86,7 @@ La \textcolor{accent}{prima equazione cardinale della dinamica dei sistemi} è
 
 
 
-\subsection{Principio di conservazione della quantità di moto}
+\section{Principio di conservazione della quantità di moto}
 
 Se in un sistema di punti materiali in ogni istante è nulla la somma delle forze esterne (reali e apparenti) allora
 
@@ -102,7 +102,7 @@ e quindi $\sum \vect{p}_i = \vect{p} = \mathrm{const}$.
 
 
 
-\subsection{Teorema del momento della quantità di moto}
+\section{Teorema del momento della quantità di moto}
 
 In un sistema formato da $n$ punti materiali, scelto un polo $O$ il \textcolor{accent}{momento risultante} rispetto a $O$ sarà
 
@@ -173,7 +173,7 @@ e nel caso in cui $O$ sia in movimento
 
 
 
-\subsection{Teorema del lavoro nei sistemi di punti}
+\section{Teorema del lavoro nei sistemi di punti}
 
 \begin{equation}
     L_j = \int_1^2 (\vect{F}_j + \vect{f}_j) \cdot d \vect{s}_j = \frac{1}{2} m (v_j'')^2 - \frac{1}{2} m (v_j')^2
@@ -193,7 +193,7 @@ e nel caso in cui $O$ sia in movimento
 
 
 
-\subsection{Teorema di K\"onig}
+\section{Teorema di K\"onig}
 
 \begin{quote}
     L'energia cinetica di un sistema di punti è pari all'energia cinetica propria nel sistema del centro di massa più l'energia di traslazione del centro di massa
@@ -207,7 +207,7 @@ e nel caso in cui $O$ sia in movimento
 
 
 
-\subsection{Energia potenziale}
+\section{Energia potenziale}
 
 Dato il lavoro di forze interne ed esterne per passare dalla configurazione $1$ alla configurazione $2$
 
@@ -215,7 +215,7 @@ Dato il lavoro di forze interne ed esterne per passare dalla configurazione $1$ 
     L = \sum \int_1^2 (\vect{F}_j + \vect{f}_j) \ d\vect{s}_j
 \end{equation}
 
-e considerata una funzione per definire l'energia potenziale del sistema 
+e considerata una funzione per definire l'energia potenziale del sistema
 
 \begin{equation}
     U(x_1, y_1, z_1, \ldots, x_n, y_n, z_n)
@@ -230,7 +230,7 @@ perché si passi dalla configurazione $1(x_1, y_1, z_1, \ldots, x_n, y_n, z_n)$ 
 di conseguenza, per una configurazione qualsiasi $C(x_1, y_1, z_1, \ldots, x_n, y_n, z_n)$ l'energia potenziale sarà
 
 \begin{equation}
-   U(x_1, y_1, z_1, \ldots, x_n, y_n, z_n) = - L_{1C} + U(1)
+    U(x_1, y_1, z_1, \ldots, x_n, y_n, z_n) = - L_{1C} + U(1)
 \end{equation}
 
 Quando tutte le forze interne sono conservative, come in questo caso, il lavoro totale delle forze applicate $\vect{R}_j = \vect{F}_j + \vect{f}_j$ è un differenziale del lavoro totale
@@ -251,7 +251,7 @@ inoltre
 
 
 
-\subsection{Conservazione dell'energia meccanica}
+\section{Conservazione dell'energia meccanica}
 
 Nel caso in cui tutte le forze agenti sul sistema siano conservative, l'energia del sistema si conserva
 
@@ -263,38 +263,38 @@ Nel caso in cui tutte le forze agenti sul sistema siano conservative, l'energia 
 
 
 
-\subsection{Urto normale centrale}
+\section{Urto normale centrale}
 
 Negli urti si conserva sempre la quantità di moto
 
 \begin{equation}
-    m_1 \vect{v}_{1i} + m_2 \vect{v}_{2i} = 
+    m_1 \vect{v}_{1i} + m_2 \vect{v}_{2i} =
     m_1 \vect{v}_{1f} + m_2 \vect{v}_{2f}
 \end{equation}
 
 
 
-\subsubsection{Urto perfettamente elastico}
+\subsection{Urto perfettamente elastico}
 
 L'energia cinetica si conserva solo negli urti perfettamente elastici
 
 \begin{equation}
-    \frac{1}{2} m_1 \vect{v}_{1i}^2 + m_2 \vect{v}_{2i}^2 = 
+    \frac{1}{2} m_1 \vect{v}_{1i}^2 + m_2 \vect{v}_{2i}^2 =
     \frac{1}{2} m_1 \vect{v}_{1f}^2 + m_2 \vect{v}_{2f}^2
 \end{equation}
 
 
 
-\subsubsection{Urto anelastico}
+\subsection{Urto anelastico}
 
 Nel caso in cui l'urto sia \emph{perfettamente} anelastico
 
 \begin{equation}
-    m_1 \vect{v}_{1i} + m_2 \vect{v}_{2i} = 
+    m_1 \vect{v}_{1i} + m_2 \vect{v}_{2i} =
     (m_1  + m_2) \vect{v}_{f}
 \end{equation}
 
 \begin{equation}
-    (1 - \alpha) \left( \frac{1}{2} m_1 \vect{v}_{1i}^2 + m_2 \vect{v}_{2i}^2 \right) = 
+    (1 - \alpha) \left( \frac{1}{2} m_1 \vect{v}_{1i}^2 + m_2 \vect{v}_{2i}^2 \right) =
     \frac{1}{2} (m_1 + m_2) \vect{v}_{f}^2
 \end{equation}

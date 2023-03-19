@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{book}
 
 \usepackage[italian]{babel}
 \usepackage[utf8]{inputenc}
@@ -96,11 +96,11 @@
     \@addtoreset{equation}{section}
     \@addtoreset{figure}{section}
 
-    \let\stdpart\part
-    \renewcommand\part{\clearpage\stdpart}
+    % \let\stdpart\part
+    % \renewcommand\part{\clearpage\stdpart}
 
-    \let\stdsection\section
-    \renewcommand\section{\ifnum\c@section>0{\clearpage}\else\fi\stdsection}
+    % \let\stdsection\section
+    % \renewcommand\section{\ifnum\c@section>0{\clearpage}\else\fi\stdsection}
 \makeatother
 
 
@@ -137,5 +137,15 @@
 \subfile{elettromagnetismo.tex}
 
 \subfile{appendici.tex}
+
+
+
+% \clearpage
+
+% \pagenumbering{gobble}
+
+% \section*{Ringraziamenti}
+
+
 
 \end{document}
