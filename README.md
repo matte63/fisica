@@ -1,3 +1,3 @@
 # Fisica
 
-`pdflatex main.pdf`
+`pdflatex main.tex`
